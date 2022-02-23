@@ -1,0 +1,142 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+:root {
+    --main-color: rgba(241, 239, 239, 0.925);
+    --primary-color: rgba(35, 35, 88, 0.87); /**/
+    --secondary-color: rgba(88, 88, 204, 0.87);
+    --therdy-color: rgba(149, 197, 229, 0.87);
+    --fourty-color: rgba(10, 121, 111, 0.87); 
+    --fifty-color: rgb(23, 90, 235);
+}
+
+html,body {
+    width: 100%;
+    overflow-x: hidden;     /* Para Não ter BARRA de rolagem na Horizontal*/
+}
+
+header {
+    width: 100%;
+    height: 500px;
+    background: var(--primary-color);
+}
+
+.content {
+    max-width: 1200px;      /* Adequar a tela nesse Size - se tiver*/
+    min-width: 350px;       /* Thinking about Mobile First*/
+    margin: 0 auto;         /* Maneira antiga de centralizar na tela - responsividade milenar*/
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+}
+
+/*      Nav - MENU    */
+
+.content nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 125px;
+    width: 100%;
+}
+
+/*  LOGO MARCA  */
+
+.content nav .logo {
+    color: var(--main-color);
+    cursor: pointer;
+    
+}
+.content nav .logo span {
+    color: var(--therdy-color);
+}
+
+/*  MENU - BOTAO  */
+
+.content nav ul {
+    display: flex;
+    align-items: center;
+    list-style: none;
+}
+.content nav ul li {
+    margin: 0px 15px;
+    padding: 7px;
+}
+.content nav ul li a:hover {
+    color: var(--therdy-color);
+}
+.content nav ul li a {
+    color: var(--main-color);
+    text-decoration: none;
+    padding: 10px;
+}
+.content nav ul button {
+    border: 1px solid var(--therdy-color);
+    border-radius: 8px;
+    padding: 10px;
+    color: var(--therdy-color);
+    width: 150px;
+    display: inline-block;
+    background: transparent;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.5s ease;
+}
+.content nav ul button:hover {
+    transition: background-color, color 0.9s;
+    background-color: var(--fourty-color);
+    color: var(--main-color);
+}
+
+/*   HEADER-BLOCK - TEXT + IMAGE*/
+
+
+.content .header-block {
+    background-color: var(--fifty-color);
+    max-width: 1200px;      
+    min-width: 350px;
+    border-radius: 10px;
+    height:450px;
+    display: flex;
+    justify-content: space-around;
+    color: var(--main-color);
+    position: relative;
+    padding: 10px;
+    z-index: 10;
+    box-shadow: 1px 0px 10px rgba(0, 0, 0, 0.4);
+}
+.content .header-block .text {
+    bottom: 30%;
+    left: 15%;
+    position: absolute;
+}
+.content .header-block .text h2 {
+    margin-bottom: 20px;
+    text-align: right;
+    transform: translateX(-20px);
+    transition: transform 0.4s;
+}
+.content .header-block .text p {
+    max-width: 280px;
+    text-align: right;
+    transform: translateX(-20px);
+    transition: transform 0.4s;
+}
+.content .header-block img {
+    width: 65%;
+    position: absolute;        /*  Quando utilizar POSITION - ativa-se o uso do RIGHT-LEFT-TOP-BOTTOM*/
+    right: 2%;
+    bottom: 2%;
+}
+
+
+/*  */
+.galeria {
+    height: 100vh;
+}
