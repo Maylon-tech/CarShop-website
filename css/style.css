@@ -136,7 +136,28 @@ header {
 }
 
 
-/*  */
-.galeria {
-    height: 100vh;
+/*  SECTOIN - CATALOG*/
+
+section.catalog {
+    border: 2px solid black;
+    width: 100vw;
+    padding: 100px;
+}
+
+.content-catalog {
+    border: 2px solid red;
+}
+
+.card-content {
+    border: 2px solid blue;
+    display: flex;
+    flex-wrap: wrap;
+
+}
+.card-content .card-item {
+    border: 2px solid green;
+
+}
+.card-content .card-item img {
+    width: 300px;
 }
