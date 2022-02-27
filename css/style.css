@@ -209,7 +209,9 @@ section .card-wrapper {
     justify-content: space-around;
     flex-wrap: wrap;
 }
-
+.card-wrapper .card-item img {
+    padding-top: 20px;
+}
 .card-wrapper .card-item .card-box {
     background-color: var(--therdy-color);
     height: 40%;
