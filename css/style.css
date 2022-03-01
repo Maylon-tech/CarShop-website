@@ -145,9 +145,6 @@ section .catalog {
     padding: 100px;
 }
 
-section .title-wrapper-catalog {
-    
-}
 section .filter-card {
     width: 950px;
     height: 150px;
@@ -321,31 +318,146 @@ section .card-wrapper {
 
 
 .features {
-    border: 2px solid red;
-    height: 100vh;
-}
-
-.features .content {
-    border: 2px solid green;
+    height: 100%;
+    width: 100%;
+    background-color: var(--therdy-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 50px 0px;
 }
 
 .title-wrapper-feature {
-    border: 2px solid purple;
-}
-
-.feature-content {
-    border: 2px solid gray;
-}
-
-.feature-content .feature-box {
-    border: 2px solid orange;
-}
-.feature-content .feature-box .left-logo img {
-    height: 100px;
+    padding: 20px 0px;
 }
 
 
+.feature-card-block {
+    max-width: 1350px;
+    min-width: 350px;
+    height: 600px;
+    background: white;
+    margin: 0 auto;
+    border-radius: 8px;
+    z-index: 10;
+    padding: 50px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(420px, 1fr));
+    grid-gap: 30px;
+}
 
+
+.feature-card-block .feature-card-item {
+    max-width: 420px;
+    height: 150px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border: 1px solid #dedede3b;
+    border-radius: 5px;
+}
+
+.feature-card-item img {
+    height: 75px;
+    
+}
+
+.feature-text-content {
+   max-width: 60%;
+   margin: 5px;
+}
 
 
 /* FOOTER */
+
+footer {
+    width: 100%;
+    height: 250px;
+}
+
+footer .main {
+    width: 100%;
+    height: 200px;
+    background: var(--secondary-color);
+    padding: 20px 10px;
+}
+
+.main .footer-links {
+    max-width: 1000px;
+    min-width: 300px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.main .footer-social img {
+    width: 32px;
+    height: 32px;
+}
+
+.footer-company,
+.footer-rental,
+.footer-contact,
+.footer-social {
+    color: white;
+    height: 100%;
+    min-height: 100px;
+}
+
+.footer-links h4 {
+    margin-bottom: 10px;
+}
+.footer-links h6 {
+    margin-bottom: 8px;
+}
+
+
+footer .last-footer {
+    width: 100%;
+    height: 50px;
+    background-color: var(--primary-color);
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+/* RESPONNSIVIDADE DESIGN   */
+
+
+@media (max-width: 576px) {
+    nav ul li {
+        display: none;
+    }
+
+    .header-block img {
+        width: 90%;
+        position: absolute;
+        right:10%;
+        top: 10%;
+    }
+
+    .header-block .text {
+        position: absolute;
+        bottom: 0%;
+        left: 15px;
+    }
+
+    section .filter-card {
+        width: 390px;
+        padding: 0 10px;
+    }
+
+    .search-input {
+        max-width: 700px;
+        min-width: 240px;
+    }
+
+    .search-button {
+        max-width: 150px;
+        min-width: 80px;
+    }
+
+}
